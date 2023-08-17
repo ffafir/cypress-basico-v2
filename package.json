@@ -8,7 +8,7 @@
     "cy:open:Mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
     "test": "cypress run",
     "test:Mobile": "cypress run --config viewportWidth=410 viewportHeight=860"
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wlsf82/cypress-basico-v2.git"
@@ -24,6 +24,7 @@
   "license": "MIT",
   "homepage": "https://github.com/wlsf82/cypress-basico-v2#readme",
   "devDependencies": {
-    "cypress": "^9.5.1"
+    "cypress": "^9.5.1",
+    "faker": "^5.5.3"
   }
 }

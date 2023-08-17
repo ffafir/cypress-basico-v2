@@ -1,15 +1,15 @@
 /// <reference types="Cypress" />
 
-import { faker } from '@faker-js/faker'
+import { faker } from '@faker-js/faker';
 
 describe('Central de Atendimento ao Cliente TAT', function() {
     const user = {}
     const largeText = 'Texto extenso para visualizar o preenchimento de um longo texto e validar que a informação não impactará no teste a ser executado pelo cypress.'
 
     before(function() {
-        user.nome = faker.name.firstName();
-        user.sobrenome = faker.name.lastName()
-        user.email = faker.internet.email();
+        user.nome = faker.person.firstName()
+        user.sobrenome = faker.person.lastName()
+        user.email = faker.internet.email()
         user.textArea = faker.lorem.words(3)
     })
 
