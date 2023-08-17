@@ -1,12 +1,6 @@
 /// <reference types="Cypress" />
 
-const { faker } = require('@faker-js/faker')
-//const { before } = require('cypress/types/lodash')
-//const { functionsIn } = require('cypress/types/lodash')
-
-//const { isNull } = require("cypress/types/lodash");
-
-//const { delay } = require("cypress/types/bluebird");
+import { faker } from '@faker-js/faker'
 
 describe('Central de Atendimento ao Cliente TAT', function() {
     const user = {}
