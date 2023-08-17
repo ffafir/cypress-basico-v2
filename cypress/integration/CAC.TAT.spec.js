@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
 const { faker } = require('@faker-js/faker')
+//const { before } = require('cypress/types/lodash')
 //const { functionsIn } = require('cypress/types/lodash')
 
 //const { isNull } = require("cypress/types/lodash");
@@ -11,13 +12,15 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     const user = {}
     const largeText = 'Texto extenso para visualizar o preenchimento de um longo texto e validar que a informação não impactará no teste a ser executado pelo cypress.'
 
-    beforeEach(function () {
-        cy.visit('./src/index.html')
-
+    before(function() {
         user.nome = faker.name.firstName();
         user.sobrenome = faker.name.lastName()
         user.email = faker.internet.email();
         user.textArea = faker.lorem.words(3)
+    })
+
+    beforeEach(function () {
+        cy.visit('./src/index.html')
         
     })
 
