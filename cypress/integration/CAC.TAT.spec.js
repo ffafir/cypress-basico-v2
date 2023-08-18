@@ -1,17 +1,17 @@
 /// <reference types="Cypress" />
 
-import { faker } from '@faker-js/faker';
+//import { faker } from '@faker-js/faker';
 
 describe('Central de Atendimento ao Cliente TAT', function() {
     const user = {}
     const largeText = 'Texto extenso para visualizar o preenchimento de um longo texto e validar que a informação não impactará no teste a ser executado pelo cypress.'
 
-    before(function() {
+/*    before(function() {
         user.nome = faker.person.firstName()
         user.sobrenome = faker.person.lastName()
         user.email = faker.internet.email()
         user.textArea = faker.lorem.words(3)
-    })
+    })*/
 
     beforeEach(function () {
         cy.visit('./src/index.html')
@@ -93,8 +93,8 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.contains('.error', 'Valide os campos obrigatórios!').should('be.visible');
     })
 
-    it('envia o formuário com sucesso usando um comando customizado', function() {
-        cy.fillMandatoryFieldsAndSubmit(user)
+    it.only('envia o formuário com sucesso usando um comando customizado', function() {
+        cy.fillMandatoryFieldsAndSubmit()
 
         cy.contains('.success', 'Mensagem enviada com sucesso.').should('be.visible')
     })
