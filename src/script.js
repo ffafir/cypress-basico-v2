@@ -1,7 +1,7 @@
 let isPhoneRequired = false
 
 const phoneLabelSpan = document.querySelector('.phone-label-span')
-const phoneField = document.getElementById('phone')
+//const phoneField = document.getElementById('phone')
 
 document.querySelector('#phone-checkbox')
   .addEventListener('change', function() {
@@ -56,7 +56,7 @@ document.querySelector('button[type="submit"]')
   }, false)
 
 function showAndHideErrorMessage() {
-  const errorMessage = document.querySelector('.error')
+//  const errorMessage = document.querySelector('.error')
   errorMessage.style.display = 'block'
   scroll(0,0)
   hideMessageAfterTimeout(errorMessage)
